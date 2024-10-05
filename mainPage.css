@@ -1,0 +1,98 @@
+
+
+.PremiumNav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.315) !important; /* Black with 5% opacity */
+}
+
+.imageContainer{
+    width: 100%;
+}
+
+.mainImage{
+    width: 100%;
+}
+
+.homeBtn,.nav-link{
+    color: #d7b700;
+    font-size: 1.5rem;
+
+}
+
+.navText{
+    margin: 20px;
+    margin-top: 18px;
+}
+
+.call{
+    text-decoration: underline;
+}
+
+.sosial{
+    color: #d7b700;
+    text-decoration: underline;
+    font-size: 0.7rem;
+    margin-top: -10px;
+}
+
+.dropdown-divider{
+    text-decoration: underline;
+}
+
+.txtSide{
+    margin-left: 5rem;
+    cursor: pointer;
+}
+
+.logoName{
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-weight: 700; /* Bold for prominence */
+    font-size: 3rem; /* Larger font size for emphasis */
+    color: #2C3E50; /* Dark color for professionalism */
+    text-align: center;
+    display: inline-block;
+    color: #d7b700;
+}
+
+
+.logo{
+
+width: 6rem;
+height: 6rem;
+color: #d7b700;
+margin-top: -2.3rem;
+}
+
+
+.locationBtn{
+    color: #d7b700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.navbar-nav-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+.logoName{
+    font-size: 20px;
+}
+
+.logo{
+
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0rem;
+
+}
+
+
+
+}
