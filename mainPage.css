@@ -1,3 +1,84 @@
+/* Hide scrollbar for Chrome, Safari, and Edge */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    /* scrollbar-width: none;     */
+  }
+  
+  .header {
+    background-color: #131428;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    height: 98%;
+  }
+  
+  .premiumTxt, .editionTxt {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  /* .scpace {
+    width: 100%;
+    flex-shrink: 0;
+  }
+   */
+  .logoImg img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .header {
+    background-color: #131428;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    height: 98%;
+  }
+  
+  .premiumTxt, .editionTxt {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    display: flex; /* Ensures letters are inline */
+  }
+  
+  .letter {
+    opacity: 0; /* Start as invisible */
+    transform: translateY(20px); /* Move down slightly */
+    animation: fadeInUp 0.5s forwards; /* Set animation */
+    margin: 0 2px; /* Add spacing between letters */
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Move to original position */
+    }
+  }
+  
+
+  .editionTxt{
+    margin-top: -43px;
+  }
+  
+
 
 
 .PremiumNav{
