@@ -158,10 +158,6 @@ if (setsedIndex.classList.contains('activeImgDiv') && setsedIndex2.classList.con
   // Requery the images after modification to reflect the new order
   images = document.querySelectorAll('.inlineBlock'); // Update the images NodeList
 
-
-
-
-
 });
 
   // autoScroll(){
