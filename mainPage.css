@@ -160,30 +160,7 @@ margin-top: -2.3rem;
 }
 
 
-@media only screen and (max-width: 600px) {
 
-.logoName{
-    font-size: 20px;
-}
-
-.logo{
-
-    width: 2rem;
-    height: 2rem;
-    margin-top: 0rem;
-
-}
-
-  .img1, .img2, .img3, .img4 {
-
-    max-width: 80%;
-    height: auto !important;
-    margin: 0 5px !important;
-  }
-
-
-
-}
 
 
 .activeImgDiv{
@@ -213,6 +190,8 @@ margin-top: -2.3rem;
   height: 100%;
   background: linear-gradient(to bottom, #131428, #2c3e5027 105px), /* Top gradient */
               linear-gradient(to top, #131428, #2c3e5027 105px);   /* Bottom gradient */
+/* z-index: -1; */
+
 }
 
 
@@ -346,3 +325,67 @@ margin-top: -2.3rem;
     transform: scale(1.3); /
   }
    */
+
+
+   @media (max-width: 600px)  {
+
+    .logoName{
+        font-size: 20px;
+    }
+    
+    .logo{
+    
+        width: 2rem;
+        height: 2rem;
+        margin-top: 0rem;
+    
+    }
+    
+      .img1, .img2, .img3, .img4 ,.img5, .img6 {
+    
+        max-width: 80%;
+        height: auto !important;
+        /* margin: 0 5px !important; */
+      }
+    
+    
+      .activeImgDiv{
+        width: 85%;
+        height: 100%;
+      }
+      
+      
+      .activeImg {
+        /* height: 0;  */
+        animation: heightChange 0.2s ease-in-out forwards; /* Apply the heightChange animation */
+        height: auto;
+        max-width: fit-content;
+      }
+      
+      @keyframes heightChange {
+        0% {
+          width:  85%; 
+        }
+        100% {
+          width:  90%; /* Animate to 95% of the container's height */
+        }
+      } 
+    
+    .img1Div, .img2Div, .img3Div, .img4Div, .img5Div, .img6Div {
+      width: 100%;
+      height: auto;
+      /* margin: 0; */
+      /* display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 537.675px; */
+    }
+    
+    
+    }
+
+
+
+    .PremiumNav{
+      z-index: 1;
+    }
