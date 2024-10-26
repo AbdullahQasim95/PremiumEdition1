@@ -21,8 +21,7 @@ body::-webkit-scrollbar {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     height: 98%;
   }
-
-
+  
   .premiumTxt, .editionTxt {
     font-size: 4rem;
     font-weight: 700;
@@ -35,8 +34,9 @@ body::-webkit-scrollbar {
   }
    */
   .logoImg img {
+    margin-top: 100px;
     max-width: 100%;
-    height: auto;
+    height: 360px;
   }
   
   .header {
@@ -64,6 +64,10 @@ body::-webkit-scrollbar {
     transform: translateY(20px); /* Move down slightly */
     animation: fadeInUp 0.5s forwards; /* Set animation */
     margin: 0 2px; /* Add spacing between letters */
+    background: linear-gradient(45deg, #dac47c, #d5b500); /* Gold gradient */
+    -webkit-background-clip: text; /* Show the gradient only on text */
+    color: transparent; /* Makes the actual text transparent */
+    position: relative;
   }
   
   /* Animation keyframes */
@@ -79,7 +83,9 @@ body::-webkit-scrollbar {
     margin-top: -43px;
   }
   
-
+.navLogo{
+  height: 65px;
+}
 
 
 .PremiumNav{
@@ -181,8 +187,34 @@ margin-top: -2.3rem;
   } */
   100% {
     height: 95%; /* Animate to 95% of the container's height */
+    box-shadow: 0px 0px 11px 20px rgb(0 0 0 / 55%);
   }
 }
+
+
+
+
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* Starts 20px lower */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* Moves to original position */
+  }
+}
+
+.logoName {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.logo {
+  animation: fadeInUp 1.2s ease forwards; /* Delayed start for a staggered effect */
+}
+
+
 
 
 
@@ -281,9 +313,11 @@ margin-top: -2.3rem;
   
 
 
-  .img1, .img2, .img3, .img4 , .img5 ,.img6 {
-    height: 80%;
-  }
+.img1, .img2, .img3, .img4, .img5, .img6 {
+  height: 80%;
+  box-shadow: 0px 0px 20px 3px rgb(0 0 0 / 39%);
+}
+  
   
   .inlineBlock {
 
@@ -326,67 +360,221 @@ margin-top: -2.3rem;
     transform: scale(1.3); /
   }
    */
+   .departmentInfoBackground{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.683);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .head{
+    width: 100%;
+    height: 90px;
+  }
+  
+  .departmentInfo__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .close{
+    position: relative;
+    float: right;
+    color: red;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .departmentInfo{
+    width: 60%;
+    height: 90%;
+    background-color: #ffffff;
+  }
+  
+  .body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .printIMG{
+    width: 60%;
+  }
+  .printingTXT{
+    text-align: center; /* Center-aligns the text */
+    margin-top: 20px;
+    font-size: x-large;
+  }
+
+@media (max-width: 600px)  {
+
+  .logoName{
+    font-size: 20px;
+  }
+
+  .logo{
+
+      width: 2rem;
+      height: 2rem;
+      margin-top: 0rem;
+
+  }
+
+  .img1, .img2, .img3, .img4, .img5, .img6 {
+    max-width: 80%;
+    height: auto !important;
+  }
+  
 
 
-   @media (max-width: 600px)  {
-
-    .logoName{
-        font-size: 20px;
+  .activeImgDiv{
+    width: 85%;
+    height: 100%;
+  }
+  
+  
+  .activeImg {
+    /* height: 0;  */
+    animation: heightChange 0.2s ease-in-out forwards; /* Apply the heightChange animation */
+    height: auto;
+    max-width: fit-content;
+  }
+  
+  @keyframes heightChange {
+    0% {
+      width:  85%; 
     }
-    
-    .logo{
-    
-        width: 2rem;
-        height: 2rem;
-        margin-top: 0rem;
-    
+    100% {
+      width:  90%; /* Animate to 95% of the container's height */
+      box-shadow: 0px 0px 11px 20px rgb(0 0 0 / 55%);
     }
-    
-      .img1, .img2, .img3, .img4 ,.img5, .img6 {
-    
-        max-width: 80%;
-        height: auto !important;
-        /* margin: 0 5px !important; */
-      }
-    
-    
-      .activeImgDiv{
-        width: 85%;
-        height: 100%;
-      }
-      
-      
-      .activeImg {
-        /* height: 0;  */
-        animation: heightChange 0.2s ease-in-out forwards; /* Apply the heightChange animation */
-        height: auto;
-        max-width: fit-content;
-      }
-      
-      @keyframes heightChange {
-        0% {
-          width:  85%; 
-        }
-        100% {
-          width:  90%; /* Animate to 95% of the container's height */
-        }
-      } 
-    
-    .img1Div, .img2Div, .img3Div, .img4Div, .img5Div, .img6Div {
-      width: 100%;
-      height: auto;
-      /* margin: 0; */
-      /* display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 537.675px; */
-    }
-    
-    
-    }
+  } 
+
+  .img1Div, .img2Div, .img3Div, .img4Div, .img5Div, .img6Div {
+    width: 100%;
+    height: auto;
+    /* margin: 0; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 537.675px; */
+  }
+
+  .departmentInfoBackground{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.683);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .head{
+    width: 100%;
+    height: 90px;
+  }
+  
+  .departmentInfo__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .close{
+    position: relative;
+    float: right;
+    color: red;
+    top: 5px;
+    right: 5px;
+  }
+  
+  .departmentInfo{
+    width: 90%;
+    height: 90%;
+    background-color: #ffffff;
+  }
+  
+  .body{
+    width: 100%;
+  }
+  .printIMG{
+    width: 100%;
+  }
+  .printingTXT {
+    font-size: x-large;
+    text-align: center; /* Center-aligns the text */
+    width: 100%; /* Ensures full-width container */
+    margin: 0 auto; /* Centers the text block horizontally */
+  }
+
+}
 
 
 
-    .PremiumNav{
-      z-index: 1;
-    }
+.PremiumNav{
+  z-index: 1;
+}
+
+
+.navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M2 8a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1m0 4a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1m1 3a1 1 0 1 0 0 2h12a1 1 0 1 0 0-2z'/%3E%3C/svg%3E");
+  background-size: cover;
+  color: white; /* Sets the icon color to white */
+}
+
+
+.navbar-toggler {
+  border: 0.5px solid #D7B700; /* 2px wide, solid style, white color */
+}
+
+
+.mainIconContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #131428;
+}
+
+
+.UVPrinterIcon , .CNCIcon , .JOINERVIcon, .DesignerIcon , .paintIcon ,.BlacksmithIcon ,.steckerIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Default style for icons */
+.UVPrinterIconImG, .CNCIconImg, .JOINERVIconImg , .DesignerIconIMG ,.paintIconIMG ,.BlacksmithIconIMG ,.steckerIconIMG{
+  width: 60%;
+  margin: 0 auto;
+  transform: scale(1); /* Initial scale */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for both transform and shadow */
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+.UVPrinterIconImG:hover, .CNCIconImg:hover, .JOINERVIconImg:hover, .DesignerIconIMG:hover ,.paintIconIMG:hover ,.BlacksmithIconIMG:hover ,.steckerIconIMG:hover{
+  transform: scale(1.1); /* Scale up on hover */
+  /* box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);  */
+}
+
+
+/* Style when in view (to be applied dynamically with JavaScript) */
+.in-view {
+  transform: scale(1.2); /* Scale up */
+}
+
+
+
+
