@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+<style type="text/css">
+	/* Gradient and stroke styles */
+	.st0{fill:none;stroke:url(#gold-gradient);stroke-width:10;stroke-miterlimit:10;}
+
+	/* Animations */
+	@keyframes fadeIn {
+		0% { opacity: 0; transform: scale(0.5); }
+		100% { opacity: 1; transform: scale(1); }
+	}
+
+@keyframes rotateIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-250px); /* Moves the element from the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Final position at its original place */
+    }
+}
+
+
+	/* Apply animations to specific elements */
+/* Animations */
+@keyframes moveFromTop {
+    0% {
+        transform: translateY(-100px) scale(0); /* Start 200px above and scale down to 0 */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: translateY(0) scale(1); /* Final position and full size */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Apply the animation to specific elements */
+<!-- #topSquer, #rightSquer, #leftSquer, #centeSquer {
+    animation: moveFromTop 2s ease-in-out forwards;
+} -->
+
+
+	#rightCorner, #leftCorner, #centercorner {
+		animation: rotateIn 1.5s ease-in-out forwards;
+	}
+
+	#cover  {
+		animation: fadeIn 1.5s ease-in-out forwards;
+	}
+</style>
+<defs>
+	<linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+		<stop offset="0%" style="stop-color:#FFD700; stop-opacity:1" />
+		<stop offset="50%" style="stop-color:#FFC150; stop-opacity:1" />
+		<stop offset="100%" style="stop-color:#FFD750; stop-opacity:1" />
+	</linearGradient>
+
+	<!-- Drop Shadow Filter -->
+	<filter id="dropShadow" x="-20%" y="-20%" width="150%" height="150%">
+		<feGaussianBlur in="SourceAlpha" stdDeviation="5"/> <!-- Shadow blur -->
+		<feOffset dx="5" dy="5" result="offsetblur"/> <!-- Shadow offset -->
+		<feFlood flood-color="rgba(0,0,0,0.5)"/> <!-- Shadow color -->
+		<feComposite in2="offsetblur" operator="in"/>
+		<feMerge>
+			<feMergeNode/>
+			<feMergeNode in="SourceGraphic"/> <!-- Merge shadow with element -->
+		</feMerge>
+	</filter>
+</defs>
+
+<!-- Apply the shadow and animation to elements -->
+<rect id="topSquer" x="636.46" y="39.89" transform="matrix(0.7071 -0.7071 0.7071 0.7071 129.3046 532.995)" class="st0" width="143.14" height="141.04" filter="url(#dropShadow)"/>
+<rect id="rightSquer" x="795.8" y="175.35" transform="matrix(0.7071 -0.7071 0.7071 0.7071 91.9079 655.5629)" class="st0" width="82.97" height="82.97" filter="url(#dropShadow)"/>
+<rect id="leftSquer" x="539.02" y="175.79" transform="matrix(0.7071 -0.7071 0.7071 0.7071 16.3913 474.1223)" class="st0" width="82.97" height="82.97" filter="url(#dropShadow)"/>
+<g id="rightCorner" filter="url(#dropShadow)">
+	<path class="st0" d="M1081.29,509.91c-58.13,58.43-116.25,116.82-174.38,175.23c-40.99,0.21-81.93,0.41-122.9,0.64
+		c60.33-58.13,120.64-116.23,180.97-174.33c-34.01-34.17-68.03-68.31-102.02-102.48c18.49-19.06,36.96-38.09,55.41-57.13
+		C972.69,404.54,1026.99,457.22,1081.29,509.91z"/>
+</g>
+<g id="leftCorner" filter="url(#dropShadow)">
+	<path class="st0" d="M333.59,509.8c58.13,58.43,116.25,116.82,174.38,175.23c40.99,0.21,81.93,0.41,122.9,0.64
+		c-60.33-58.13-120.64-116.23-180.97-174.33c34.01-34.17,68.03-68.31,102.02-102.48c-18.49-19.06-36.96-38.09-55.41-57.13
+		C442.2,404.43,387.89,457.12,333.59,509.8z"/>
+</g>
+<g id="centercorner" filter="url(#dropShadow)">
+	<path class="st0" d="M859.55,511.78c-49.66,49.66-99.3,99.3-148.96,148.96c-51.35-51.3-102.68-102.56-154.04-153.86
+		c16.37-16.52,32.73-33.09,49.1-49.64c34.35,33.91,68.67,67.85,102.99,101.79c33.32-32.91,66.64-65.82,99.96-98.73
+		C825.59,477.46,842.57,494.65,859.55,511.78z"/>
+</g>
+<rect id="centeSquer" x="672.42" y="369.45" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -80.9144 620.8564)" class="st0" width="73.13" height="77.3" filter="url(#dropShadow)"/>
+<path id="cover" class="st0" d="M1183.72,511.46c-81.98,81.98-163.94,163.94-245.92,245.92H483.38
+	C399.5,673.5,315.62,589.65,231.74,505.74c87.91-86.57,175.82-173.12,263.75-259.72c35.84,35.84,71.67,71.67,107.48,107.51
+	c34.81-35.01,69.62-70,104.43-105.02c34.19,34.86,68.39,69.75,102.56,104.61L917.66,245.4
+	C1006.34,334.08,1095.04,422.78,1183.72,511.46z" filter="url(#dropShadow)"/>
+</svg>
