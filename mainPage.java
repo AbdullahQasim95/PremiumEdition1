@@ -7,10 +7,10 @@ letters.forEach((letter, index) => {
   letter.style.opacity = 1; // Set the opacity to 1 to start the animation
 });
 
- var userLanguage;
+ var userLanguage= "ar";
 
 document.addEventListener("DOMContentLoaded", function() {
-   userLanguage = navigator.language || navigator.userLanguage;
+  //  userLanguage = navigator.language || navigator.userLanguage;
   const eng = document.getElementById('en');
   const ar = document.getElementById('ar');
 
@@ -123,9 +123,7 @@ let setsedIndex=document.querySelector('.img1');
 let setsedIndex2=document.querySelector('.img1');
 function activeImg(index) {
   let currentIndexImg = index+1;
-  console.log('.img'+currentIndexImg)
   const activeI = images[index];
-console.log('.I' + parseInt(activeI.id));
   activeI.classList.add('activeImgDiv');
   const activeI2 = document.querySelector('.img'+parseInt(activeI.id));
   activeI2.classList.add('activeImg');
@@ -138,7 +136,6 @@ console.log('.I' + parseInt(activeI.id));
 let isScrolling;
 projectImg.addEventListener('scroll', () => {
   clearTimeout(isScrolling);
-  console.log(setsedIndex)
 if (setsedIndex.classList.contains('activeImgDiv') && setsedIndex2.classList.contains('activeImg')) {
     setsedIndex.classList.remove('activeImgDiv');
     setsedIndex2.classList.remove('activeImg');
@@ -233,40 +230,39 @@ var DesignerIconIMG = document.querySelector('.DesignerIconIMG');
 var BlacksmithIconIMG = document.querySelector('.BlacksmithIconIMG');
 var steckerIcon = document.querySelector('.steckerIcon');
 
-let printTxt="Equipped with advanced printing technology, our Printing Department provides versatile services, from UV printing for vibrant, long-lasting colors to custom sticker printing for branding. We bring your ideas to life on a wide range of materials, offering high-quality, impactful prints for any purpose."
-let CNCTxt="In the CNC Department, we specialize in precision cutting for materials like wood, foam, and plastics. Our expert operators and top-tier machinery ensure accurate and intricate designs, enabling us to create custom pieces that enhance any display or promotional setup. "
-let JOINERVTxt="Our Joinery Department focuses on crafting custom, high-quality woodwork. From booths and stands to unique display setups, our joiners create sturdy, stylish pieces that are integral to our advertising installations. Their expertise ensures each project is finished with an eye for detail and durability."
-let paintTxt="The Paint Department provides finishing touches that bring our projects to life. Using a range of colors and finishes, our skilled painters add vibrancy and protection, enhancing both the visual appeal and longevity of every piece we produce."
-let DesignerTxt="Our Design Department brings creativity and innovation to every project. Skilled in 3D Max, Photoshop, and Illustrator, our designers create stunning visuals that form the foundation of our physical displays, ensuring that each project is eye-catching, functional, and aligned with our clients' vision."
-let BlacksmithTxt="The Blacksmith Department combines traditional skills with modern techniques to deliver durable, custom-made metalwork. Whether it’s sturdy frames for displays, unique decorative elements, or robust stands, our blacksmith team ensures precision and resilience in every project."
-let steckerTxt="Our Sticker Department is dedicated to crafting high-quality stickers that meet the specific needs of our clients. From eye-catching decals to branding essentials, we handle the full process, including LED integration and meticulous collection and finishing touches. Our stickers are designed to last, with options that suit indoor and outdoor applications."
-
-let printTitle="Printing Department"
-let CNCTitle="CNC Department"
-let JOINERTitle="Joinery Department"
-let paintTitle="Paint Department"
-let DesignerTitle="Designer Department"
-let BlacksmithTitle="Blacksmith Department"
-let steckerTitle="Sticker Department"
+let printTxt="يتميز قسم الطباعة بتقنيات طباعة متقدمة، مما يتيح لنا تقديم خدمات متنوعة، مثل الطباعة بالأشعة فوق البنفسجية للحصول على ألوان نابضة بالحياة تدوم طويلاً، إلى جانب طباعة الملصقات المخصصة للعلامات التجارية. نحن نحول أفكارك إلى واقع على مجموعة واسعة من المواد بجودة عالية وأثر بصري قوي."
+let CNCTxt="يتخصص قسم سي إن سي لدينا في قطع المواد بدقة، مثل الخشب والرغوة والبلاستيك. يضمن مشغلونا المهرة وآلاتنا عالية الجودة تصاميم دقيقة ومتقنة، مما يمكننا من إنشاء قطع مخصصة تضيف قيمة إلى أي عرض أو إعداد ترويجي."
+let JOINERVTxt="يركز قسم النجارة على تصنيع الأعمال الخشبية المخصصة عالية الجودة. من الأكشاك إلى الهياكل المخصصة للعرض، يقوم فريقنا بإنتاج قطع متينة وأنيقة تندمج ضمن تجهيزات العرض والإعلانات. يضمن اهتمامهم بالتفاصيل تقديم مشاريع تتميز بالثبات والجمال."
+let paintTxt="يقدم قسم الدهانات اللمسات النهائية التي تضفي الحياة على مشاريعنا. باستخدام مجموعة من الألوان والتشطيبات، يقوم فريقنا من الرسامين بإضافة الحيوية والحماية، مما يزيد من جاذبية وجمال وديمومة كل قطعة ننتجها."
+let DesignerTxt="يتميز قسم التصميم لدينا بالإبداع والابتكار الذي يضفي لمسات فريدة على كل مشروع نقوم به. يعمل فريق التصميم باحترافية عالية لإنتاج تصاميم بصرية جذابة ومتميزة تشكل جوهر تجهيزات العرض وتضيف لمسات جمالية تتناسب مع رغبات وأهداف العملاء. نسعى دائماً لتحقيق التوازن بين الشكل والوظيفة، بحيث تكون كل قطعة ملفتة للنظر وفعّالة في الوقت ذاته، مما يضمن تحقيق رؤية العميل بشكل كامل واحترافي."
+let BlacksmithTxt="يجمع قسم الحدادة بين المهارات التقليدية والتقنيات الحديثة لتقديم أعمال معدنية متينة ومخصصة. سواء كانت إطارات قوية للعرض أو عناصر زخرفية فريدة أو قواعد ثابتة، يضمن فريقنا من الحدادين الدقة والصلابة في كل مشروع."
+let steckerTxt="يهتم قسم الملصقات لدينا بإنتاج ملصقات عالية الجودة تلبي احتياجات عملائنا بدقة. بدءًا من الملصقات المميزة إلى الملصقات المخصصة للعلامات التجارية، نتولى عملية الإنتاج بالكامل، بما في ذلك دمج الإضاءة ووضع اللمسات النهائية بعناية. صُممت ملصقاتنا لتدوم وتناسب الاستخدام الداخلي والخارجي."
+let printTitle="قسم الطباعة";
+let CNCTitle="قسم CNC";
+let JOINERTitle="قسم النجارة";
+let paintTitle="قسم الدهانات";
+let DesignerTitle="قسم التصميم";
+let BlacksmithTitle="قسم الحدادة";
+let steckerTitle="قسم الملصقات";
 
 
 
  function updateLang()  { 
   if(userLanguage == 'ar'){
-   printTxt="يتميز قسم الطباعة بتقنيات طباعة متقدمة، مما يتيح لنا تقديم خدمات متنوعة، مثل الطباعة بالأشعة فوق البنفسجية للحصول على ألوان نابضة بالحياة تدوم طويلاً، إلى جانب طباعة الملصقات المخصصة للعلامات التجارية. نحن نحول أفكارك إلى واقع على مجموعة واسعة من المواد بجودة عالية وأثر بصري قوي."
- CNCTxt="يتخصص قسم سي إن سي لدينا في قطع المواد بدقة، مثل الخشب والرغوة والبلاستيك. يضمن مشغلونا المهرة وآلاتنا عالية الجودة تصاميم دقيقة ومتقنة، مما يمكننا من إنشاء قطع مخصصة تضيف قيمة إلى أي عرض أو إعداد ترويجي."
- JOINERVTxt="يركز قسم النجارة على تصنيع الأعمال الخشبية المخصصة عالية الجودة. من الأكشاك إلى الهياكل المخصصة للعرض، يقوم فريقنا بإنتاج قطع متينة وأنيقة تندمج ضمن تجهيزات العرض والإعلانات. يضمن اهتمامهم بالتفاصيل تقديم مشاريع تتميز بالثبات والجمال."
- paintTxt="يقدم قسم الدهانات اللمسات النهائية التي تضفي الحياة على مشاريعنا. باستخدام مجموعة من الألوان والتشطيبات، يقوم فريقنا من الرسامين بإضافة الحيوية والحماية، مما يزيد من جاذبية وجمال وديمومة كل قطعة ننتجها."
- DesignerTxt="يتميز قسم التصميم لدينا بالإبداع والابتكار الذي يضفي لمسات فريدة على كل مشروع نقوم به. يعمل فريق التصميم باحترافية عالية لإنتاج تصاميم بصرية جذابة ومتميزة تشكل جوهر تجهيزات العرض وتضيف لمسات جمالية تتناسب مع رغبات وأهداف العملاء. نسعى دائماً لتحقيق التوازن بين الشكل والوظيفة، بحيث تكون كل قطعة ملفتة للنظر وفعّالة في الوقت ذاته، مما يضمن تحقيق رؤية العميل بشكل كامل واحترافي."
- BlacksmithTxt="يجمع قسم الحدادة بين المهارات التقليدية والتقنيات الحديثة لتقديم أعمال معدنية متينة ومخصصة. سواء كانت إطارات قوية للعرض أو عناصر زخرفية فريدة أو قواعد ثابتة، يضمن فريقنا من الحدادين الدقة والصلابة في كل مشروع."
- steckerTxt="يهتم قسم الملصقات لدينا بإنتاج ملصقات عالية الجودة تلبي احتياجات عملائنا بدقة. بدءًا من الملصقات المميزة إلى الملصقات المخصصة للعلامات التجارية، نتولى عملية الإنتاج بالكامل، بما في ذلك دمج الإضاءة ووضع اللمسات النهائية بعناية. صُممت ملصقاتنا لتدوم وتناسب الاستخدام الداخلي والخارجي."
- printTitle="قسم الطباعة";
- CNCTitle="قسم CNC";
- JOINERTitle="قسم النجارة";
- paintTitle="قسم الدهانات";
- DesignerTitle="قسم التصميم";
- BlacksmithTitle="قسم الحدادة";
- steckerTitle="قسم الملصقات";
+    printTxt="يتميز قسم الطباعة بتقنيات طباعة متقدمة، مما يتيح لنا تقديم خدمات متنوعة، مثل الطباعة بالأشعة فوق البنفسجية للحصول على ألوان نابضة بالحياة تدوم طويلاً، إلى جانب طباعة الملصقات المخصصة للعلامات التجارية. نحن نحول أفكارك إلى واقع على مجموعة واسعة من المواد بجودة عالية وأثر بصري قوي."
+  CNCTxt="يتخصص قسم سي إن سي لدينا في قطع المواد بدقة، مثل الخشب والرغوة والبلاستيك. يضمن مشغلونا المهرة وآلاتنا عالية الجودة تصاميم دقيقة ومتقنة، مما يمكننا من إنشاء قطع مخصصة تضيف قيمة إلى أي عرض أو إعداد ترويجي."
+  JOINERVTxt="يركز قسم النجارة على تصنيع الأعمال الخشبية المخصصة عالية الجودة. من الأكشاك إلى الهياكل المخصصة للعرض، يقوم فريقنا بإنتاج قطع متينة وأنيقة تندمج ضمن تجهيزات العرض والإعلانات. يضمن اهتمامهم بالتفاصيل تقديم مشاريع تتميز بالثبات والجمال."
+  paintTxt="يقدم قسم الدهانات اللمسات النهائية التي تضفي الحياة على مشاريعنا. باستخدام مجموعة من الألوان والتشطيبات، يقوم فريقنا من الرسامين بإضافة الحيوية والحماية، مما يزيد من جاذبية وجمال وديمومة كل قطعة ننتجها."
+  DesignerTxt="يتميز قسم التصميم لدينا بالإبداع والابتكار الذي يضفي لمسات فريدة على كل مشروع نقوم به. يعمل فريق التصميم باحترافية عالية لإنتاج تصاميم بصرية جذابة ومتميزة تشكل جوهر تجهيزات العرض وتضيف لمسات جمالية تتناسب مع رغبات وأهداف العملاء. نسعى دائماً لتحقيق التوازن بين الشكل والوظيفة، بحيث تكون كل قطعة ملفتة للنظر وفعّالة في الوقت ذاته، مما يضمن تحقيق رؤية العميل بشكل كامل واحترافي."
+  BlacksmithTxt="يجمع قسم الحدادة بين المهارات التقليدية والتقنيات الحديثة لتقديم أعمال معدنية متينة ومخصصة. سواء كانت إطارات قوية للعرض أو عناصر زخرفية فريدة أو قواعد ثابتة، يضمن فريقنا من الحدادين الدقة والصلابة في كل مشروع."
+  steckerTxt="يهتم قسم الملصقات لدينا بإنتاج ملصقات عالية الجودة تلبي احتياجات عملائنا بدقة. بدءًا من الملصقات المميزة إلى الملصقات المخصصة للعلامات التجارية، نتولى عملية الإنتاج بالكامل، بما في ذلك دمج الإضاءة ووضع اللمسات النهائية بعناية. صُممت ملصقاتنا لتدوم وتناسب الاستخدام الداخلي والخارجي."
+  printTitle="قسم الطباعة";
+  CNCTitle="قسم CNC";
+  JOINERTitle="قسم النجارة";
+  paintTitle="قسم الدهانات";
+  DesignerTitle="قسم التصميم";
+  BlacksmithTitle="قسم الحدادة";
+  steckerTitle="قسم الملصقات";
 } else {
  printTxt="Equipped with advanced printing technology, our Printing Department provides versatile services, from UV printing for vibrant, long-lasting colors to custom sticker printing for branding. We bring your ideas to life on a wide range of materials, offering high-quality, impactful prints for any purpose."
  CNCTxt="In the CNC Department, we specialize in precision cutting for materials like wood, foam, and plastics. Our expert operators and top-tier machinery ensure accurate and intricate designs, enabling us to create custom pieces that enhance any display or promotional setup. "
@@ -407,3 +403,246 @@ steckerIcon.addEventListener('click', function() {
   
   popup.style.display = 'flex';
 });
+
+var chatHistory = "";
+let messagecounter=0;
+const chatBack=document.getElementById('chatBack');
+const robotImg=document.querySelector('.robotImg');
+
+
+robotImg.addEventListener('click', function() {
+  chatBack.style.display = 'flex';
+});
+
+
+
+
+
+// Listen for Enter key press
+const chatTxt = document.getElementById('chatTxt');
+chatTxt.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    sendMesg(chatTxt.value); // Pass the message content
+    chatTxt.value = ''; // Clear the input field after sending
+  }
+});
+
+// Send message to OpenAI API using fetch
+async function sendMesg(chatMesg) {
+  const apiKey = "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"; // Replace with your API key
+  const apiUrl = "https://api.openai.com/v1/chat/completions";
+
+
+  chatHistory+=("message hestory "+messagecounter+" {role: 'user', content: "+chatMesg+"}");
+  messagecounter++;
+  const data = {
+    model: "gpt-4",
+    messages: [
+      { role: "system", content: "what dose the user asking about choose between the following options: 1. a normal qustion 2. image generation    >>Note:the response must be in this format: 1 or 2" },
+      { role: "user", content: chatHistory }
+    ]
+  };
+
+  generateChatContainerUser(chatMesg);
+  TypingMessage();
+
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      const aiResponse = result.choices[0].message.content;
+      if(aiResponse.includes("2")){
+        const imageUrl = await generateImage(chatMesg);
+        // displayMessage(imageUrl);
+        return;
+      } else{
+      sendCompletionMesage(chatMesg); // Call a function to display the AI's response
+      }
+
+    } else {
+      console.error("API request failed:", response.status, response.statusText);
+    }
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+}
+
+// Display the AI's response in the chat window
+
+
+
+async function generateImage(imageTxt) {
+  const apiKey = "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"; // Replace with your actual API key
+  const apiUrl = "https://api.openai.com/v1/images/generations";
+
+
+  const data = {
+    model: "dall-e-3",
+    prompt: chatHistory,
+    n: 1,
+    size: "1024x1024"
+  };
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      const imageUrl = result.data[0].url; // The URL for the generated image
+      displayImage(imageUrl); // Function to display the generated image
+      // chatHistory.push({ role: "assistant", content: imageUrl });
+      chatHistory+=("message hestory "+messagecounter+" {role: 'assistant', content: "+imageUrl+"}");
+    } else {
+      console.error("API request failed:", response.status, response.statusText);
+    }
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+}
+
+// Function to display the image on the webpage
+function displayImage(imageUrl) {
+  const chatTxt= document.getElementById('chatTxt');
+  chatTxt.disabled=false;
+  const TypingMessage = document.querySelector('.TypingMessage');
+  TypingMessage.remove();
+    // const imageContainer = document.getElementById('imageContainer'); 
+    const chatContainer = document.createElement('div');
+  chatContainer.classList.add('chatContainerTxt');
+  const chatBody = document.querySelector('.chatBody');
+  // const imageDis= document.createElement('img');
+  const img = document.createElement('img');
+  img.src = imageUrl;
+  img.alt = "Generated image";
+  img.style.width = "100%";
+  img.classList.add('generatedImageStyle');
+  chatContainer.appendChild(img);
+  chatBody.appendChild(chatContainer);
+  const element = document.querySelector(".chatBody");
+  element.scrollTo({ top: element.scrollHeight, behavior: "smooth" });
+}
+
+
+// function generateChatContainer() {
+//   const chatContainer = document.createElement('div');
+//   chatContainer.classList.add('chatContainer');
+// }
+
+function generateChatContainerUser(chatTxt) {
+  const chatContainer = document.createElement('div');
+  chatContainer.classList.add('chatContainerUser');
+  const chatBody = document.querySelector('.chatBody');
+  const messageElement = document.createElement('p');
+  messageElement.className = "userMessage";
+  // messageElement.className = "aiMessage"; 
+  messageElement.textContent = chatTxt;
+  chatContainer.appendChild(messageElement);
+  chatBody.appendChild(chatContainer);
+  const element = document.querySelector(".chatBody");
+  element.scrollTo({ top: element.scrollHeight, behavior: "smooth" });
+}
+
+async function sendCompletionMesage(chatMesg) {
+  const apiKey = "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"; // Replace with your actual API key
+  const apiUrl = "https://api.openai.com/v1/chat/completions";
+
+  const data = {
+    model: "gpt-4",
+    messages: [
+      {
+        role: "system",
+        content: "If the user asks about our company: We are an advertising company that prints stickers, flex, UV prints, creates stands, and other advertising and printing products, including LED logos."
+      },
+      { role: "user", content: chatHistory }
+    ]
+  };
+
+  // Display user message in chat
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      const aiResponse = result.choices[0].message.content;
+      displayMessage(aiResponse); // Display AI's response
+      // chatHistory.push({ role: "assistant", content: aiResponse });
+      chatHistory+=("message hestory "+messagecounter+" {role: 'assistant', content: "+aiResponse+"}");
+    } else {
+      console.error("API request failed:", response.status, response.statusText);
+    }
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+}
+
+
+document.addEventListener("click", function (event) {
+  const chatBackground = document.getElementById("chatBack");
+  const chatContainer = document.querySelector(".chatContainer");
+
+  // Check if the click is outside the chatContainer
+  if (!chatContainer.contains(event.target) && chatBackground.contains(event.target)) {
+    chatBackground.style.display = "none"; // Hide the chat window
+  }
+});
+
+
+function displayMessage(message) {
+  const chatTxt= document.getElementById('chatTxt');
+  chatTxt.disabled=false;
+  const TypingMessage = document.querySelector('.TypingMessage');
+  TypingMessage.remove();
+  const chatContainer = document.createElement('div');
+  const chatBody = document.querySelector('.chatBody');
+  const messageElement = document.createElement('p');
+  messageElement.className = "aiMessage"; // Style it with CSS if needed
+  messageElement.textContent = message;
+  chatContainer.appendChild(messageElement);
+  chatBody.appendChild(chatContainer);
+  const element = document.querySelector(".chatBody");
+  element.scrollTo({ top: element.scrollHeight, behavior: "smooth" });
+}
+
+
+function TypingMessage(){
+  const chatTxt= document.getElementById('chatTxt');
+  chatTxt.disabled=true;
+  const chatContainer = document.createElement('div');
+  chatContainer.classList.add('TypingMessage');
+  chatContainer.classList.add('aiMessage');
+  const chatBody = document.querySelector('.chatBody');
+  // const imageDis= document.createElement('img');
+  const img = document.createElement('img');
+  img.src = "loading-discord-grey.gif";
+  img.alt = "Generated image";
+  img.style.width = "50px";
+  img.classList.add('generatedImageStyle');
+  chatContainer.appendChild(img);
+  chatBody.appendChild(chatContainer);
+  const element = document.querySelector(".chatBody");
+  element.scrollTo({ top: element.scrollHeight, behavior: "smooth" });
+}
