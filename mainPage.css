@@ -64,11 +64,11 @@ body::-webkit-scrollbar {
     transform: translateY(20px); /* Move down slightly */
     animation: fadeInUp 0.5s forwards; /* Set animation */
     margin: 0 2px; /* Add spacing between letters */
-    background: linear-gradient(45deg, #dac47c, #d5b500); /* Gold gradient */
-    -webkit-background-clip: text; /* Show the gradient only on text */
-    color: transparent; /* Makes the actual text transparent */
+    color: white; /* Change text color to white */
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8); /* Add reflection effect */
     position: relative;
-  }
+}
+
   
   /* Animation keyframes */
   @keyframes fadeInUp {
@@ -543,7 +543,7 @@ margin-top: -2.3rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 102.8%;
   height: 100%;
   background-color: #131428;
 }
@@ -576,5 +576,208 @@ margin-top: -2.3rem;
 }
 
 
+.chatContainer {
+  border-radius: 10px;
+  width: 50%;
+  height: 90%;
+  background-color: #ffffff; /* Fix missing hash */
+  display: flex;
+  flex-direction: column; /* Arrange children vertically */
+  min-width: 350px;
+  max-width: 650px;
+  max-height: 1000px;
+  overflow-y: scroll; /* Hide overflow to prevent scrollbars */
+}
+
+.chatContainer::-webkit-scrollbar {
+  width: 0; /* Hide the scrollbar */
+  display: none;
+}
 
 
+
+.chatBackground{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.683);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.robot{
+  position: fixed;
+  bottom: 50px;
+  right: 25px;
+  width: 100px; 
+}
+/* 
+.chathead{
+  height: 13%;
+}
+
+.chatBody {
+  flex-grow: 1; 
+  width: 100%;
+  margin-left: 0px;
+  position: relative;
+  height: 50%;
+}
+
+.chatBody::-webkit-scrollbar {
+  width: 0; 
+  display: none;
+}
+
+.chatFoter {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+  padding: 10px;
+  border-top: 2px solid #2C3E50;
+  margin-top: auto; 
+}
+
+
+.chatTxt{
+  border: #2C3E50 solid 3px;
+  border-radius: 0px 10px 0px 10px ;
+  height: 132%;
+  margin: 0px;
+}
+
+
+.chatContainerTxt{
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+
+chatContainerUser{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+
+
+
+.aiMessage{
+  text-align: left;
+}
+
+.generatedImageStyle{
+  width: 200px !important;
+
+} */
+
+
+
+
+
+
+.userMessage{
+  text-align: right;
+}
+
+.chatBackground {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.683);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.chatContainer {
+  width: 50%;
+  height: 90%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.chathead {
+  height: 13%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #2C3E50;
+  color: white;
+}
+
+.chatBody {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chatFoter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-top: 2px solid #2C3E50;
+}
+
+.chatTxt {
+  flex-grow: 1;
+  padding: 5px;
+  border: 2px solid #2C3E50;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.sendChat svg {
+  cursor: pointer;
+}
+
+/* Optional scrollbar styling */
+.chatBody::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chatBody::-webkit-scrollbar-thumb {
+  background-color: #2C3E50;
+  border-radius: 10px;
+}
+
+
+.footer {
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, #2c3e5027, #0f1126 25px);
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+.premuimName {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.premuimName1{
+  color: white;
+  font-size: 3rem;
+  margin-top: -30px;
+  font-weight: bold;
+}
+
+.establishment,.contact{
+  margin-top: 15px;
+  color: white;
+}
