@@ -402,7 +402,10 @@ margin-top: -2.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 0px;
   }
+
+
   .printIMG{
     width: 60%;
   }
@@ -543,7 +546,7 @@ margin-top: -2.3rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 102.8%;
+  width: 101.1%;
   height: 100%;
   background-color: #131428;
 }
